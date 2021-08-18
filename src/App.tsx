@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, ChangeEvent} from 'react';
+import { Input} from "./components";
+import {ListContainer} from "./containers/ListContainer";
 import './App.css';
 
 function App() {
+  const [filterValue, setFilterValue] = useState('');
+
+  const handleFilter = (e: ChangeEvent<HTMLInputElement>) => {
+    setFilterValue(e.target.value.toLocaleLowerCase());
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-holder">
+      <div className="app-header">
+        <Input placeholder="Search by author or ISBN" onChange={handleFilter}/>
+      </div>
+      <ListContainer filterValue={filterValue} />
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.collapsable {}
+
+.collapsable-row-title {
+    cursor: pointer;
+    border-top: solid 1px #f2f2f2;
+    border-bottom: solid 1px #f2f2f2;
+    padding: 15px;
+    margin: 0;
+}
+
+.collapsable-row-title:hover {
+    background-color: #f2f2f2;
+}
+
+.collapsable-row-title img {
+    margin-right: 10px;
+}
+
+.collapsable-row-content {
+    border-bottom: solid 1px #f2f2f2;
+    border-radius: 0 0 5px 5px;
+    padding: 15px;
+    font-size: 14px;
+}

@@ -1,0 +1,19 @@
+.row-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-header-inner {
+    display: flex;
+    align-items: center;
+}
+
+.row-title {
+    display: block;
+}
+
+.row-subtitle {
+    display: block;
+    font-size: 12px;
+    color: #909090;
+}
